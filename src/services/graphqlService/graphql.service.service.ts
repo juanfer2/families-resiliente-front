@@ -1,9 +1,9 @@
-import ApolloClient, { InMemoryCache,   } from 'apollo-boost';
-import {isEmpty} from 'lodash'
-import {env} from '../../contants/api.constant'
-
+import ApolloClient, { InMemoryCache } from 'apollo-boost';
+import { isEmpty } from 'lodash'
+import { env } from '../../contants/api.constant'
+// env.apiUrlGraphql
 const Client: any = new ApolloClient({
-  uri: env.apiUrlGraphql,
+  uri: 'http://localhost:3000/graphql',
   cache: new InMemoryCache({
     addTypename: false,
   }),
