@@ -1,12 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
-body {
-  padding: 0;
-  margin: 0;
-  background-color: #17141d;
-  color: white;
-  font-family: 'DM Mono', monospace;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap");
 .card-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,10 +14,8 @@ body {
 .card-list::-webkit-scrollbar-thumb {
   background: #201c29;
   border-radius: 10px;
-  -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
-    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25),
-    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .card-list::-webkit-scrollbar-track {
@@ -39,8 +29,8 @@ body {
   position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 350px;
   width: 400px;
   min-width: 250px;
@@ -48,21 +38,21 @@ body {
   border-radius: 16px;
   background: #17141d;
   -webkit-box-shadow: -1rem 0 3rem #000;
-  box-shadow: -1rem 0 3rem #000;
+          box-shadow: -1rem 0 3rem #000;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
 .card-list .card:hover {
   -webkit-transform: translateY(-1em);
-  transform: translateY(-1em);
+          transform: translateY(-1em);
   margin-left: 3rem;
   margin-right: 3rem;
 }
 
 .card-list .card:hover ~ .card {
   -webkit-transform: translateX(130px);
-  transform: translateX(130px);
+          transform: translateX(130px);
 }
 
 .card-list .card:not(:first-child) {
@@ -80,13 +70,7 @@ body {
 }
 
 .card-list .card-header:hover h2 {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#ff8a00),
-    to(#e52e71)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#e52e71));
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   background-clip: text;
@@ -99,10 +83,10 @@ body {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 75px 1fr;
-  grid-template-columns: 75px 1fr;
+      grid-template-columns: 75px 1fr;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 3rem 0 0;
 }
 
@@ -112,7 +96,7 @@ body {
   height: 40px;
   border-radius: 50%;
   -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
+          filter: grayscale(100%);
   margin: 16px 10px;
 }
 

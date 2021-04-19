@@ -10,7 +10,6 @@ import { healtAction } from './flux/actions/healt.action'
 
 import Navbar from './components/navbar'
 import Home from './components/home'
-import Pokemons from './components/pokemons'
 
 function App() {
   const dispatch = useDispatch()
@@ -26,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <Home />
-      <Pokemons />
     </div>
   )
 }

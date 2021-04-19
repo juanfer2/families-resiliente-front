@@ -16,7 +16,7 @@ export type ProfessionalType = {
 }
 
 export type ProfessionalsState = {
-  professionals: ProfessionalType | [],
+  professionals: ProfessionalType[] | [],
   error: Error | null,
   loanding: boolean
 }

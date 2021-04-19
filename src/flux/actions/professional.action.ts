@@ -8,7 +8,6 @@ import {
 
 import { gql } from '@apollo/client';
 
-
 const GET_PROFESSIONALS_QUERY = gql`
   query {
     professionals{
@@ -22,32 +21,19 @@ const GET_PROFESSIONALS_QUERY = gql`
   }
 `;
 
-const startGetProfessionals = () =>{
-  return { type: GET_PROFESSIONALS_START }
-}
-
-const successGetProfessionals = (payload: any) =>{
-  return { payload, type: GET_PROFESSIONALS_SUCCESS }
-}
-
-const errorGetProfessionals = (error: Error) =>{
-  return { error, type: GET_PROFESSIONALS_ERROR }
-}
-
 export const getProfessionals = () => {
   return (dispatch: any) => {
     try{
-      dispatch(startGetProfessionals())
+      dispatch({ type: GET_PROFESSIONALS_START })
       Client.query({
         query: GET_PROFESSIONALS_QUERY,
       }).then((data: any) => {
-        console.log(data)
-        dispatch(successGetProfessionals(data.professionals))
+        dispatch({ payload: data.data.professionals, type: GET_PROFESSIONALS_SUCCESS })
       }).catch((error: Error)=> {
-        dispatch(errorGetProfessionals(error))
+        dispatch({ error: error, type: GET_PROFESSIONALS_ERROR })
       });
     } catch (error) {
-      dispatch(errorGetProfessionals(error))
+      dispatch({ error: error, type: GET_PROFESSIONALS_ERROR })
     }
   }
 }
